@@ -2,8 +2,6 @@ package page.objects;
 
 import data.Constants;
 
-import data.EmailAddress;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,6 +21,7 @@ public class LoginPage extends BasePage {
 
     @FindBy(xpath = "//button[@onclick='logIn()']")
     WebElement loginButton;
+
 
     public LoginPage(WebDriver driver) {
         super(driver);

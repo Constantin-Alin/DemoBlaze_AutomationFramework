@@ -22,6 +22,11 @@ public class HomePage extends BasePage {
     @FindBy(css = "#nameofuser")
     WebElement succesfulLoginMessage;
 
+    @FindBy(xpath = "(//a[@class='hrefch'])[5]")
+    WebElement productLink;
+
+
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -43,4 +48,12 @@ public class HomePage extends BasePage {
         log.info("Message acquired");
         return succesfulLoginMessage.getText();
     }
+
+    public void clickOnProductLink() {
+        Wait.waitUntilElementIsClickable(productLink, driver);
+        productLink.click();
+        log.info("Clicking on product");
+    }
+
+
 }

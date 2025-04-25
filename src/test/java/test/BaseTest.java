@@ -3,7 +3,6 @@ package test;
 import data.Constants;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,10 +19,5 @@ class BaseTest {
         driver.get(Constants.URL);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
-    }
-
-    @Test
-    void goToWebsiteTest() {
-        driver.get(Constants.URL);
     }
 }
